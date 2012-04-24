@@ -1,0 +1,12 @@
+Compile.txt
+===========
+
+
+1) type "qmake"
+2) type "make"
+
+to run the game:
+type "./SpaceInvaders"
+
+
+Thank you. Hope you enjoy. 

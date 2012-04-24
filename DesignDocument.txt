@@ -1,0 +1,122 @@
+Design Document
+===============
+
+Description of Game
+-------------------
+For this homework, we had to crate a game in Qt.
+The game had to have at least:
+- 2 things that shoot back
+- 1 thing that follows
+- 3 different levels
+… and a total of 12 different objects
+
+Furthermore, Polymorphism and Inheritance was required. 
+
+
+Game Detail
+-----------
+For the game, I tried to create a remixed variation of Space invaders in order for there to be 12 objects. 
+There are 3 levels: 
+In the first level:
+- There are 5 scrolling aliens that shoot missile at random. 
+- When the reach one of the edge of the screen, the move down by 30 pixels and move in the opposite direction.
+- They keeping going until the shooter kills them all.
+- Once all 5 aliens are destroyed, the next level is started. 
+
+In the second level:
+- There are 3 diagonal moving aliens.
+- They attempt, as well as possible, to shoot towards the player, limited on angle and bomb speed.
+- There is also a martian space ship that follows the shooter. 
+- At random, the martian spaceship will spray martians out at high speed.
+- The player can proceed to the next level by shooting first at the 3 diagonal moving aliens, and finally at the spaceship. 
+
+On the third level:
+- There are 4 aliens, moving in opposite directions. 
+- There is also a big boss alien. 
+- The boss alien will launch a giant bomb at the player if it can sense the player is nearby. 
+- The 4 body guard aliens will also launch dynamites at the player if it gets close to the player. 
+- In order to win the level and the game, the player would have to first get rid of all the bodyguard aliens, and finally shoot the big boss. 
+
+
+How to Play
+-----------
+Press 'spacebar' to start the game.
+Press 'left arrow key' to move left.
+Press 'right arrow key' to move right.
+Press 'up arrow key' to shoot bullets. 
+Press 'esc key' to quit.
+
+Get as many points as possible whilst staying alive. 
+All aliens are worth 1 point. The spaceship is worth 10 points and the big boss is work 100 points. 
+
+
+
+Purpose/Overview
+----------------
+Use the Qtlibrary to implement a keyboard based game, which has a score and a finite number of lives. 
+
+Requirements (from assignment prompt for hw4)
+- Users must be able to interact with the game
+- There must be at least 3 moving objects with different purposes
+- and two other objects that must interact with the game (moving or non-moving), for a total of 5 objects. 
+- The game must display the numbers of lives remaining and the score gained by the player so far.
+- The game must end when the player runs out of lives, and the game permits the player to restart the game. 
+
+Furthermore (From assignment prompt)
+- At least 2 of your "things" shoot back at you - wherever you are. That means they "figure out" where you are and shoot at your location. If you don't move, you'll get hit.
+- At least 1 of your "things" follows you. At the highest level, perhaps they also move faster than you.
+- Three (3) different screens - these may represent 3 worlds/levels, etc. This can be done with different backgrounds and different (or at least some different) "things". They are to look, and act, differently.
+- Twelve (12) different types of "things". Some of which are good for you (add to lives/score, and some that are bad for you. Each of these is to have their own movement/shooting, etc., capabilities. By "types of things" we mean different classes. You are required to use polymorphism and inheritance.
+
+
+Classes
+-------
+- Shooter
+- Enemy
+- Alien
+- AlienTwo
+- AlienThree
+- Spaceship
+- AlienBoss
+- Weapon
+- Bullet
+- Bomb
+- BombTwo
+- BombThree
+- Homing
+- Alienhead
+- SpaceInvaders
+- Window
+
+Weapon and Enemy are both classes in which other classes inherit from, and they contain virtual functions. 
+
+Global Data/Functions
+---------------------
+- Global Data:
+    - no global data. 
+
+- Functions:
+    - Function Name: center
+    - arguments: none
+    - return value: void
+    - What exceptions (if any) might it throw: none
+    - Description of what the function does:
+        - centers the game window on the screen. 
+    
+
+
+
+High-Level Architecture
+-----------------------
+Everything would interact through classes.
+Classes will inherit from base classes. This will allow lots of code reuse. 
+
+
+Test Cases
+----------
+- Make sure lives are deducted when player is shot.
+- Make sure score increases appropriately when the enemy's are shot.
+- Die in each of the levels to make sure the game can be restarted
+- Achieve victory. 
+
+
