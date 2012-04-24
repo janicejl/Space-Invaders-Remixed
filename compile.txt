@@ -6,7 +6,7 @@ Compile.txt
 2) type "make"
 
 to run the game:
-type "./SpaceInvaders"
+type "./Space-Invaders-Remixed" if on Parallel03
 
 
 Thank you. Hope you enjoy. 
